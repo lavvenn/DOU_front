@@ -72,3 +72,14 @@ form {
     padding: 5px;
     font-size: 16px;
 }
+
+
+button {
+    background-color: #4b3c6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -10,7 +10,7 @@ async function send_post() {
 
     let formattedDate = `${day}/${month}/${year}`
 
-    let response = await fetch("http:127.0.0.1:8000/add_child", {
+    let response = await fetch("http:127.0.0.1:8000/children/add", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
