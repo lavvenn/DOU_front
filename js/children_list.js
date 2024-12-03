@@ -1,7 +1,16 @@
+async function get_api_adress(){
+    let response = await fetch("../js/settings.json")
+    let content = await response.json()
+    return content.api_adress
+}
 
 
 async function get(){
-    let response = await fetch("http:127.0.0.1:8000/children")
+
+    let api_adress = await get_api_adress()
+
+
+    let response = await fetch(api_adress + "/children")
     let content = await response.json()
     console.log(content)
 

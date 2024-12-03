@@ -1,5 +1,15 @@
+async function get_api_adress(){
+    let response = await fetch("../js/settings.json")
+    let content = await response.json()
+    return content.api_adress
+}
+
+
 async function send_post() {
-    let response = await fetch("http:127.0.0.1:8000/tests/raven/add", {
+
+    let api_adress = await get_api_adress()
+
+    let response = await fetch(api_adress + "/tests/raven/add", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
